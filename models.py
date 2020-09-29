@@ -57,7 +57,7 @@ class Subsession(BaseSubsession):
             return
 
         #Random round picked for payment
-        self.session.vars['payment_round'] = random.randint(1, self.num_rounds())
+        self.session.vars['payment_round'] = random.randint(4, self.num_rounds())
         
         num_silos = self.session.config['num_silos']
         fixed_id_in_group = not config['shuffle_role']
